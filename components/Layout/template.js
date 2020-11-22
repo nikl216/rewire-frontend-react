@@ -28,7 +28,7 @@ export default function Layout() {
         alignItems="center"
       >
         <Box p="10">
-          <Heading size="md" color="#fff" fontFamily="Space Grotesk">
+          <Heading size="md" color="#fff">
             <Box as="span" color="#bfb5d7">
               re
             </Box>
@@ -66,12 +66,7 @@ export default function Layout() {
 function NavLink({ heading, link }) {
   return (
     <Box p="5">
-      <Heading
-        size="sm"
-        color="#fff"
-        _hover={{ color: "#efe8d8" }}
-        fontFamily="Space Grotesk"
-      >
+      <Heading size="sm" color="#efe8d8" _hover={{ color: "#bfb5d7" }}>
         <Link href={link}>{heading}</Link>
       </Heading>
     </Box>

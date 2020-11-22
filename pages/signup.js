@@ -1,10 +1,13 @@
+import Banner from "../components/banner";
+import { bannerOne, bannerTwo } from "../components/data";
 import Layout from "../components/Layout/template";
 
 export default function SingUp() {
   return (
     <>
       <Layout />
-      <div>Signup</div>
+      <Banner {...bannerOne} />
+      <Banner {...bannerOne} />
     </>
   );
 }

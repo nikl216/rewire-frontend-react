@@ -1,22 +1,101 @@
-import { Box, Container, Text } from "@chakra-ui/react";
-import useWindowDimensions from "../utils/windowheight";
+import { Box, Center, Heading, SimpleGrid, Text } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
+import Image from "next/image";
 
-export default function Banner() {
-  const { height } = useWindowDimensions();
-
+export default function Banner({
+  dark,
+  imgFirst,
+  src,
+  alt,
+  heading,
+  subheading,
+}) {
+  const [height, setHeight] = useState(null);
+  if (process.browser) {
+    useEffect(() => {
+      setHeight(window.innerHeight);
+      function handleResize() {
+        setHeight(window.innerHeight);
+      }
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }, [window.innerHeight]);
+  }
+  var color = "#bfb5d7";
+  var textColor = "black";
+  if (dark == true) {
+    color = "black";
+    textColor = "#bfb5d7";
+  }
   return (
     <>
-      <Box height={height} width="100%" bg="grey" paddingTop="80px">
-        <Text>Hi</Text>
-      </Box>
       <Box
-        height={height}
+        minHeight={height}
         width="100%"
-        bg="black"
+        bg={color}
         paddingTop="80px"
-        color="white"
+        px="24px"
       >
-        <Text>Hi</Text>
+        <Box color={color} p="30px">
+          <SimpleGrid
+            templateColumns={["1fr", "1fr", "1fr 2fr", "1fr 2fr"]}
+            templateRows="1fr"
+            spacing="40px"
+            position="relative"
+          >
+            <Box
+              bg={color}
+              boxShadow="mg"
+              rounded="md"
+              position="relative"
+              height={["200px", "200px", "350px", "500px"]}
+            >
+              <Image src={src} alt={alt} layout="fill" object-fit="cover" />
+            </Box>
+            <Box
+              bg={color}
+              boxShadow="mg"
+              rounded="md"
+              minHeight={["400px", "400px", "350px", "500px"]}
+            >
+              <SimpleGrid
+                rows={2}
+                columns={1}
+                spacing={["10px", "20px"]}
+                px={25}
+              >
+                <Box
+                  bg={color}
+                  minHeight={["100px", "150px", "125px", "180px"]}
+                  pt={[5, 20]}
+                  textAlign="center"
+                >
+                  <Text
+                    color={textColor}
+                    fontSize={["3xl", "3xl", "3xl", "5xl"]}
+                    fontWeight="bold"
+                  >
+                    {heading}
+                  </Text>
+                </Box>
+
+                <Box
+                  bg={color}
+                  minHeight={["100px", "100px", "125px", "180px"]}
+                  px={0}
+                  textAlign="center"
+                >
+                  <Text
+                    color={textColor}
+                    fontSize={["2xl", "2xl", "3xl", "3xl"]}
+                  >
+                    {subheading}
+                  </Text>
+                </Box>
+              </SimpleGrid>
+            </Box>
+          </SimpleGrid>
+        </Box>
       </Box>
     </>
   );

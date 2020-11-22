@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Center,
   Drawer,
   DrawerBody,
@@ -14,7 +15,13 @@ import { CloseIcon } from "@chakra-ui/icons";
 export default function SideBar({ onClose, isOpen }) {
   return (
     <>
-      <Drawer placement={"top"} onClose={onClose} isOpen={isOpen} size={"full"}>
+      <Drawer
+        placement={"top"}
+        onClose={onClose}
+        isOpen={isOpen}
+        size={"full"}
+        autoFocus={false}
+      >
         <DrawerOverlay>
           <DrawerContent bg="black">
             <DrawerHeader>
@@ -37,7 +44,17 @@ export default function SideBar({ onClose, isOpen }) {
                 <LinkMobile heading="Home" link="/" click={onClose} />
                 <LinkMobile heading="Work" link="/signup" click={onClose} />
                 <LinkMobile heading="About" link="/" click={onClose} />
-                <Box height="40px" color="#efe8d8"></Box>
+                <Box height="40px"></Box>
+                <Center>
+                  <Button
+                    bg="#efe8d8"
+                    height="60px"
+                    width="50%"
+                    _hover={{ bg: "#bfb5d7" }}
+                  >
+                    <Text color="#000">Get Quote</Text>
+                  </Button>
+                </Center>
               </SimpleGrid>
             </DrawerBody>
           </DrawerContent>

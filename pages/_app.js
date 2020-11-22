@@ -1,8 +1,16 @@
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+
+const theme = extendTheme({
+  fonts: {
+    body: "Space Grotesk",
+    heading: "Space Grotesk",
+    mono: "Space Grotesk",
+  },
+});
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <style>
         @import
         url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap');
