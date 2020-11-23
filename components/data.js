@@ -10,7 +10,7 @@ export const bannerOne = {
 
 export const bannerTwo = {
   dark: true,
-  imgFirst: true,
+  imgFirst: false,
   src: "/images/personal-website.svg",
   alt: "web development",
   heading: "Blazing fast websites guaranteed",

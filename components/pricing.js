@@ -1,28 +1,11 @@
 import { Box, Center, SimpleGrid, Square, Text } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
+
 import Image from "next/image";
 
 export default function Pricing({ color }) {
-  const [height, setHeight] = useState(null);
-  if (process.browser) {
-    useEffect(() => {
-      setHeight(window.innerHeight);
-      function handleResize() {
-        setHeight(window.innerHeight);
-      }
-      window.addEventListener("resize", handleResize);
-      return () => window.removeEventListener("resize", handleResize);
-    }, []);
-  }
   return (
     <>
-      <Box
-        minHeight={height}
-        width="100%"
-        bg={color}
-        paddingTop="80px"
-        px="24px"
-      >
+      <Box width="100%" bg={color} paddingTop={["40px", "80px"]} px="24px">
         <Box
           py={["50px", "50px", "100px", "100px"]}
           px={["70px", "70px", "100px", "100px"]}
@@ -39,7 +22,7 @@ export default function Pricing({ color }) {
               price="15,000"
             />
             <Card
-              src="/images/analytics.svg"
+              src="/images/slider.svg"
               alt="small business"
               heading="Small Business"
               subheading="The perfect plan for small Businesses"
