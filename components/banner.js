@@ -11,16 +11,15 @@ export default function Banner({
   subheading,
 }) {
   const [height, setHeight] = useState(null);
-  if (process.browser) {
-    useEffect(() => {
+  useEffect(() => {
+    setHeight(window.innerHeight);
+    function handleResize() {
       setHeight(window.innerHeight);
-      function handleResize() {
-        setHeight(window.innerHeight);
-      }
-      window.addEventListener("resize", handleResize);
-      return () => window.removeEventListener("resize", handleResize);
-    }, []);
-  }
+    }
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   var color = "#bfb5d7";
   var textColor = "black";
   if (dark == true) {

@@ -12,7 +12,7 @@ export default function Pricing({ color }) {
       }
       window.addEventListener("resize", handleResize);
       return () => window.removeEventListener("resize", handleResize);
-    }, [window.innerHeight]);
+    }, []);
   }
   return (
     <>
