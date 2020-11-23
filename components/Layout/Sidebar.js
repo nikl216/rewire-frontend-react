@@ -36,6 +36,7 @@ export default function SideBar({ onClose, isOpen }) {
             </DrawerHeader>
             <DrawerBody>
               <SimpleGrid
+                pt="20px"
                 columns={1}
                 rows={5}
                 minChildHeight="30px"

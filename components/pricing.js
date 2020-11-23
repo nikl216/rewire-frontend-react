@@ -32,21 +32,21 @@ export default function Pricing({ color }) {
             spacing={["60px", "60px", "80px", "100px"]}
           >
             <Card
-              src="/../public/images/dashboard.svg"
+              src="/../public/dashboard.svg"
               alt="personal"
               heading="Solo"
               subheading="Best for Personal Portfolios and Blogs"
               price="15,000"
             />
             <Card
-              src="/../public/images/analytics.svg"
+              src="/../public/analytics.svg"
               alt="small business"
               heading="Small Business"
               subheading="The perfect plan for small Businesses"
               price="25,000"
             />
             <Card
-              src="/../public/images/data.svg"
+              src="/../public/data.svg"
               alt="Custom"
               heading="Custom"
               subheading="A custom tailored plan for all your website needs"
@@ -65,12 +65,12 @@ function Card({ src, alt, heading, subheading, price }) {
       bg="white"
       boxShadow="lg"
       rounded="md"
-      minHeight={["200px", "200px", "300px", "400px"]}
+      minHeight={["100px", "100px", "300px", "400px"]}
     >
       <SimpleGrid row={2} p="20px" spacing="30px">
         <Box
           bg="white"
-          minHeight={["150px", "150px", "150px", "200px"]}
+          minHeight={["100px", "150px", "150px", "200px"]}
           position="relative"
         >
           <Image src={src} alt={alt} layout="fill" object-fit="cover" />
@@ -78,18 +78,18 @@ function Card({ src, alt, heading, subheading, price }) {
         <Box bg="white" minHeight={["100px", "100px", "100px", "160px"]}>
           <SimpleGrid textAlign="center" spacing={["10px", "20px"]}>
             <Box>
-              <Text fontSize={["xl", "xl", "2xl", "3xl"]} fontWeight="bold">
+              <Text fontSize={["lg", "lg", "2xl", "3xl"]} fontWeight="bold">
                 {heading}
               </Text>
-              <Text fontSize="xl">
+              <Text fontSize={["lg", "xl"]}>
                 Starts at Rs{" "}
-                <Box as="span" fontSize="xl" fontWeight="bold">
+                <Box as="span" fontSize={["lg", "xl"]} fontWeight="bold">
                   {price}
                 </Box>
               </Text>
             </Box>
             <Box>
-              <Text fontSize={["xl", "xl", "2xl", "2xl"]}>{subheading}</Text>
+              <Text fontSize={["md", "xl", "2xl", "2xl"]}>{subheading}</Text>
             </Box>
           </SimpleGrid>
         </Box>

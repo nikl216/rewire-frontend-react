@@ -1,7 +1,7 @@
 export const bannerOne = {
   dark: false,
   imgFirst: true,
-  src: "/../public/images/website-setup.svg",
+  src: "/../public/website-setup.svg",
   alt: "web development",
   heading: "The future of web is Here",
   subheading:
@@ -11,7 +11,7 @@ export const bannerOne = {
 export const bannerTwo = {
   dark: true,
   imgFirst: true,
-  src: "/../public/images/personal-website.svg",
+  src: "/../public/personal-website.svg",
   alt: "web development",
   heading: "Blazing fast websites guaranteed",
   subheading:

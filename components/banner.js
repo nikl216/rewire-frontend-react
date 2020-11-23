@@ -19,7 +19,7 @@ export default function Banner({
       }
       window.addEventListener("resize", handleResize);
       return () => window.removeEventListener("resize", handleResize);
-    }, [window.innerHeight]);
+    }, []);
   }
   var color = "#bfb5d7";
   var textColor = "black";
@@ -48,7 +48,7 @@ export default function Banner({
               boxShadow="mg"
               rounded="md"
               position="relative"
-              height={["200px", "200px", "350px", "500px"]}
+              height={["150px", "150px", "350px", "500px"]}
             >
               <Image src={src} alt={alt} layout="fill" object-fit="cover" />
             </Box>
@@ -56,7 +56,7 @@ export default function Banner({
               bg={color}
               boxShadow="mg"
               rounded="md"
-              minHeight={["400px", "400px", "350px", "500px"]}
+              minHeight={["120px", "120px", "350px", "500px"]}
             >
               <SimpleGrid
                 rows={2}
