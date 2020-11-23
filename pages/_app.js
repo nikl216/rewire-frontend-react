@@ -2,9 +2,9 @@ import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 
 const theme = extendTheme({
   fonts: {
-    body: "Space Grotesk",
-    heading: "Space Grotesk",
-    mono: "Space Grotesk",
+    body: "Space Grotesk,Arial",
+    heading: "Space Grotesk,Arial",
+    mono: "Space Grotesk,Arial",
   },
 });
 

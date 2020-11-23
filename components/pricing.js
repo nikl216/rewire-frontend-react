@@ -32,21 +32,21 @@ export default function Pricing({ color }) {
             spacing={["60px", "60px", "80px", "100px"]}
           >
             <Card
-              src="/../public/dashboard.svg"
+              src="/images/dashboard.svg"
               alt="personal"
               heading="Solo"
               subheading="Best for Personal Portfolios and Blogs"
               price="15,000"
             />
             <Card
-              src="/../public/analytics.svg"
+              src="/images/analytics.svg"
               alt="small business"
               heading="Small Business"
               subheading="The perfect plan for small Businesses"
               price="25,000"
             />
             <Card
-              src="/../public/data.svg"
+              src="/images/data.svg"
               alt="Custom"
               heading="Custom"
               subheading="A custom tailored plan for all your website needs"
