@@ -1,5 +1,5 @@
 import { Box, Center, Heading, SimpleGrid, Text } from "@chakra-ui/react";
-
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 export default function Banner({
@@ -10,6 +10,11 @@ export default function Banner({
   heading,
   subheading,
 }) {
+  const [height, setHeight] = useState(null);
+  useEffect(() => {
+    setHeight(window.innerHeight);
+  }, []);
+
   var color = "#bfb5d7";
   var textColor = "black";
   if (dark == true) {
@@ -19,7 +24,7 @@ export default function Banner({
   return (
     <>
       <Box
-        minHeight={["600px", "600px", "600px", "730px"]}
+        minHeight={height}
         width="100%"
         bg={color}
         paddingTop="80px"

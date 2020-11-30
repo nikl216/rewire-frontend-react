@@ -16,7 +16,7 @@ export default function Footer() {
         minHeight={["150px", "200px"]}
       >
         <Box pt="40px">
-          <SimpleGrid rows={2} columns={1} spacing={["10px", "20px"]} px={25}>
+          <SimpleGrid rows={2} columns={1} spacing={["30px", "40px"]} px={25}>
             <Box>
               <Heading as="span" size="md" color="#fff">
                 <Box as="span" color="#bfb5d7">

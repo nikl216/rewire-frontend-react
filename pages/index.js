@@ -1,8 +1,10 @@
 import Layout from "../components/Layout/template";
-import { bannerOne, bannerTwo } from "../components/data";
+import { bannerOne, bannerTwo, bannerThree } from "../components/data";
 import Banner from "../components/banner";
 import Pricing from "../components/pricing";
 import Footer from "../components/Layout/Footer";
+import { Divider } from "@chakra-ui/react";
+
 export default function App() {
   return (
     <>
@@ -11,6 +13,8 @@ export default function App() {
       <Banner {...bannerOne} />
       <Banner {...bannerTwo} />
       <Pricing color="#bfb5d7" />
+      <Banner {...bannerThree} />
+      <Divider />
       <Footer />
     </>
   );

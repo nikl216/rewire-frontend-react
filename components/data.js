@@ -17,3 +17,11 @@ export const bannerTwo = {
   subheading:
     "We use state-of-the-art tech stack to build amazingly fast websites",
 };
+export const bannerThree = {
+  dark: true,
+  imgFirst: true,
+  src: "/images/buildin-website.svg",
+  alt: "building website",
+  heading: "Start building your brand now",
+  subheading: "Connect with us right now and grow your brand on the fly",
+};
